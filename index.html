@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DigitalCrafts Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body id="body">
+    <div class="container" role="main">
+        <header class="header content-wrapper">
+            <h1>Digital Crafts Weather Station</h1>
+            <!-- <div class="leftHeader"><i class="fa fa-web"></i></div> -->
+        </header>
+        <div class="content-wrapper input-wrapper">
+            <input class="zipCode" type="text" placeholder="Enter Your Zip Code...">
+            <button onclick="displayDataToPage()"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="content-container">
+            <div class="content-wrapper">
+                <div class="error-wrapper">
+                    Please Enter a valid Zip Code.
+                </div>
+            </div>
+            <div class="weather-display content-wrapper">
+                <div class="temp"></div>
+                <img class="weatherDesc" src="" />
+        </div>
+                <div class="content-wrapper city-wrapper">
+                    <div class="city"></div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+
+</html>

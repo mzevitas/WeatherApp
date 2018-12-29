@@ -1,0 +1,175 @@
+body {
+    background: url('../images/background-gradient.jpg') no-repeat center center fixed;
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.redError {
+    background-image: url('https://media.giphy.com/media/bi6RQ5x3tqoSI/giphy.gif');
+}
+
+.thunderStorm {
+    background-image: url('https://media.giphy.com/media/KWmfjA70Gfio/giphy.gif');
+}
+
+.rain {
+    background-image: url('https://media.giphy.com/media/Il9f7ZhytEiI0/giphy.gif');
+}
+
+.clouds {
+    background-image: url('https://media.giphy.com/media/3o6EhOYMhOTANYgHMk/giphy.gif');
+}
+
+.clear {
+    background-image: url('https://media.giphy.com/media/jZ02CfMfCpf6o/giphy.gif');
+}
+
+.atmoshere {
+    background-image: url('https://media.giphy.com/media/CJBvaVsKM7tNC/giphy.gif');
+}
+
+.snow {
+    background-image: url('https://media.giphy.com/media/7Bgpw7PwdxoDC/giphy.gif');
+}
+
+.drizzle {
+    background-image: url('https://media.giphy.com/media/l0IrIkq7Q3iRII0hy/giphy.gif');
+}
+
+.container {
+    width: 100%;
+    margin-top: 80px;
+
+    .content-container {
+            margin-top: $padding;
+
+        &.weatherBoxBackground {
+            background-color: $weatherBox;
+            border-radius: 15px;
+            max-width: 960px;
+            width: 100%;
+            margin: 40px auto;
+        }
+    }
+
+    .content-wrapper {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+
+        h1 {
+            font-weight: bold;
+            color: $white;
+            text-align: center;
+            text-shadow: 2px 1px 1px $button;
+        }
+
+        .error-wrapper {
+            display: none;
+            font-size: em(40);
+            color: #f5deb3;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px $white;
+            padding: $padding;
+
+            &.error {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        &.weather-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+            align-items: center;
+            text-align: center;
+            border-radius: 15px;
+
+            @media #{$mobile} {
+                grid-template-columns: 1fr;
+
+            }
+
+            .weatherDesc {
+                width: 150px;
+                margin: 0 auto;
+            }
+
+            .temp {
+                font-size: em(120);
+            }
+        }
+
+        &.city-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-content: center;
+
+            .city {
+                text-align: center;
+                font-size: em(80);
+                font-weight: bold;
+            }
+        }
+
+        &.input-wrapper {
+            margin: 0 auto;
+            text-align: center;
+
+            .zipCode {
+                width: 300px;
+                margin: 0 auto;
+                border: 0;
+                border-radius: 15px;
+                height: 20px;
+                padding: $padding / 2 $padding;
+                box-shadow: 1px 1px 1px $shadow;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                border: 0;
+                background-color: $button;
+                transition: all 0.5s ease-in-out;
+                border-radius: 15px;
+                height: 40px;
+                padding: 0 $padding;
+                color: $white;
+                text-transform: uppercase;
+                box-shadow: 1px 1px 1px $white;
+
+                @media #{$mobile}  {
+                    margin-top: 30px;
+                    width: 300px;
+                }
+
+                &:hover {
+                    background-color: $hover;
+                    color: $button;
+                    cursor: pointer;
+                    box-shadow: 1px 1px 1px $button;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
